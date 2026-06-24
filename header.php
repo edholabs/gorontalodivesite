@@ -59,10 +59,27 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="home"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="data"><i class="fa fa-compass"></i> Dive Site</a></li>
             <li><a href="peta"><i class="fa fa-map-marker"></i> Dive Map</a></li>
-            <li><a href="berita"><i class="fa fa-newspaper-o"></i> Information</a></li>
-            <li><a href="kontak"><i class="fa fa-envelope-o"></i> Contact Us</a></li>
+            <li><a href="data"><i class="fa fa-list"></i> Dive Sites</a></li>
+            <li><a href="produk"><i class="fa fa-shopping-bag"></i> Shop</a></li>
+            
+            <?php 
+            $cart_count = (isset($_SESSION['cart'])) ? count($_SESSION['cart']) : 0;
+            ?>
+            <li><a href="keranjang"><i class="fa fa-shopping-cart"></i> Cart <?php if($cart_count > 0) echo '<span class="badge" style="background:#ff5050;">'.$cart_count.'</span>'; ?></a></li>
+            
+            <?php if(isset($_SESSION['user_id'])) { ?>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> <?php echo explode(' ', $_SESSION['user_nama'])[0]; ?> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="checkout">Pesanan Saya</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="logout_user">Logout</a></li>
+                    </ul>
+                </li>
+            <?php } else { ?>
+                <li><a href="login_user" class="btn-premium" style="margin-top: 8px; margin-left: 10px; padding: 5px 15px !important;"><i class="fa fa-sign-in"></i> Login</a></li>
+            <?php } ?>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
