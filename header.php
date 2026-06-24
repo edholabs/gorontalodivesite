@@ -4,15 +4,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>    
-    <meta name="description" content="Gorontalo Dive, Dive Gorontalo,Dinas Pariwisata Provinsi Gorontalo, Gorontalo, Pemerintah Provinsi Gorontalo, Wonderfull Indonesia"/>
-    <meta name="keywords" content="Gorontalo Dive, Dive Gorontalo,Dinas Pariwisata Gorontalo,Wisata Bawah Laut Gorontalo,WonderFull indonesia,Pemerintah Provinsi Gorontalo"/>
-    <meta name="author" content="idgonet - edhowalla"/>
-    <meta name="theme-color" content="#ff5050">
-    <meta name="msapplication-navbutton-color" content="#ff5050">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#ff5050">
-  <link rel="icon" type="img/png" href="img/icon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo $title; ?></title>
+    <meta name="description" content="Explore the magnificent underwater dive spots in Gorontalo. Interactive Web GIS for Gorontalo tourism, dive sites, and marine life."/>
+    <meta name="keywords" content="Gorontalo Dive, Dive Gorontalo, Dinas Pariwisata Gorontalo, Wisata Bawah Laut Gorontalo, Wonderful Indonesia, Peta Selam"/>
+    <meta name="author" content="Gorontalo Tourism">
+    
+    <!-- Open Graph / WhatsApp / Facebook SEO Tags -->
+    <meta property="og:title" content="<?php echo isset($title) ? $title : 'Gorontalo Dive Site'; ?>">
+    <meta property="og:description" content="Explore the best dive sites in Gorontalo with our interactive Web GIS map and guides.">
+    <meta property="og:image" content="http://gorontalodivesite.com/img/background.png">
+    <meta property="og:url" content="http://gorontalodivesite.com">
+    <meta property="og:type" content="website">
+
+    <meta name="theme-color" content="#00b4d8">
+    <meta name="msapplication-navbutton-color" content="#00b4d8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#00b4d8">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    
+    <title><?php echo isset($title) ? $title . " - Gorontalo Dive Site" : "Gorontalo Dive Site"; ?></title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="css/style.css" rel="stylesheet">
