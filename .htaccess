@@ -1,0 +1,13 @@
+RewriteEngine On
+Options -MultiViews
+
+# If the request is a real file or directory, serve it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite /home to index.php
+RewriteRule ^home/?$ index.php [L,NC]
+
+# Automatically append .php extension if the file exists
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
